@@ -27,7 +27,7 @@ jobs:
       osx_image: xcode10
       env: CPPFLAGS=-I/usr/local/opt/openssl/include LDFLAGS=-L/usr/local/opt/openssl/lib
       node_js:
-        - "8"
+        - "10"
     - stage: test_on_win
       os: windows
       node_js:
