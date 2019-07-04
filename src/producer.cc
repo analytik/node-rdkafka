@@ -445,7 +445,7 @@ NAN_METHOD(Producer::NodeProduce) {
   }
 
   std::vector<RdKafka::Headers::Header> headers;
-  if (info.Length() > 6 && !info[6]->IsUndefined()) {
+  /*if (info.Length() > 6 && !info[6]->IsUndefined()) {
     v8::Local<v8::Array> v8Headers = v8::Local<v8::Array>::Cast(info[6]);
 
     if (v8Headers->Length() >= 1) {
@@ -468,7 +468,7 @@ NAN_METHOD(Producer::NodeProduce) {
           RdKafka::Headers::Header(key, value.c_str(), value.size()));
       }
     }
-}
+  }*/
 
   Producer* producer = ObjectWrap::Unwrap<Producer>(info.This());
 
