@@ -139,6 +139,7 @@
                     ],
                     'OTHER_CPLUSPLUSFLAGS': [
                       '-I/usr/local/opt/openssl/include',
+                      '-Wdeprecated-declarations',
                       '-std=c++11'
                     ],
                   },
