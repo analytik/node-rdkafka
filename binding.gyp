@@ -121,6 +121,7 @@
                 'OS=="linux"',
                 {
                   'cflags_cc' : [
+                    '-Wno-deprecated-declarations',
                     '-std=c++11'
                   ],
                   'cflags_cc!': [
