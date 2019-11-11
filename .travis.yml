@@ -4,7 +4,6 @@ cache:
   directories:
   - node_modules
 node_js:
-  - "4"
   - "6"
   - "8"
   - "10"
@@ -29,10 +28,12 @@ jobs:
       env: CPPFLAGS=-I/usr/local/opt/openssl/include LDFLAGS=-L/usr/local/opt/openssl/lib
       node_js:
         - "10"
+        - "12"
     - stage: test_on_win
       os: windows
       node_js:
         - "10"
+        - "12"
     # - stage: create_doc
     #   provider: script
     #   before_deploy:
@@ -47,6 +48,7 @@ jobs:
       os: linux
       node_js:
         - "10"
+        - "12"
       script: skip
       if: (tag =~ ^v)
       before_deploy:

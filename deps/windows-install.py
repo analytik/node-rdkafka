@@ -3,7 +3,7 @@ librdkafkaVersion = ''
 import json
 with open('../package.json') as f:
     librdkafkaVersion = json.load(f)['librdkafka']
-librdkafkaWinSufix = '7' if librdkafkaVersion == '0.11.5' else '';
+librdkafkaWinSufix = '7' if librdkafkaVersion == '1.1.0' else '';
 
 depsPrecompiledDir = '../deps/precompiled'
 depsIncludeDir = '../deps/include'

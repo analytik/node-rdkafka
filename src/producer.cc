@@ -471,7 +471,7 @@ NAN_METHOD(Producer::NodeProduce) {
           RdKafka::Headers::Header(key, value.c_str(), value.size()));
       }
     }
-}
+  }
 
   Producer* producer = ObjectWrap::Unwrap<Producer>(info.This());
 

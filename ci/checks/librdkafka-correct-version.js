@@ -41,16 +41,21 @@ function parseLibrdkafkaVersion(version) {
   const patch = (intRepresentation & patchMask) >> (8 * 1);
   const rev = (intRepresentation & revMask) >> (8 * 0);
 
-  return {
+  const output = {
     major,
     minor,
     patch,
-    rev
   };
+
+  if (rev !== 255) {
+    output.rev = rev;
+  }
+
+  return output;
 }
 
 function versionAsString(version) {
-  return [
+  const versionItems = [
     version.major,
     version.minor,
     version.patch,

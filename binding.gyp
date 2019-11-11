@@ -122,6 +122,7 @@
                 'OS=="linux"',
                 {
                   'cflags_cc' : [
+                    '-Wno-deprecated-declarations',
                     '-std=c++11'
                   ],
                   'cflags_cc!': [
@@ -140,6 +141,7 @@
                     ],
                     'OTHER_CPLUSPLUSFLAGS': [
                       '-I/usr/local/opt/openssl/include',
+                      '-Wno-deprecated-declarations',
                       '-std=c++11'
                     ],
                   },
